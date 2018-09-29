@@ -3,7 +3,7 @@ async function getInviteInfo(inviteCode) {
     let response = null;
     try {
         response = await $.get("https://discordapp.com/api/v6/invites/" + inviteCode);
-    } catch {
+    } catch(_) {
         return response;
     }
     if (response.message !== undefined) {
