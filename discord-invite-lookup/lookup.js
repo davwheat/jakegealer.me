@@ -25,6 +25,16 @@ async function handleError(errorID) {
     }
 }
 
+// This is from https://stackoverflow.com/a/47180281
+function escapeOutput(toOutput){
+    return toOutput.replace(/\&/g, '&amp;')
+        .replace(/\</g, '&lt;')
+        .replace(/\>/g, '&gt;')
+        .replace(/\"/g, '&quot;')
+        .replace(/\'/g, '&#x27')
+        .replace(/\//g, '&#x2F');
+}
+
 // Something has been pressed to start the lookup.
 async function startLookup() {
     let inviteBoxText = await $("#InviteBox").val().trim();
@@ -84,13 +94,13 @@ async function startLookup() {
     await $("#MainContainer").append(`
         <div class="notification is-info" id="InviteResult">
             <h1 class="title">
-                Information about ${inviteResult.guild.name} (From invite ${inviteResult.code}):
+                Information about ${escapeOutput(inviteResult.guild.name)} (From invite ${inviteResult.code}):
             </h1>
             <p><strong>Guild ID:</strong> ${inviteResult.guild.id}</p>
             <p><strong>Guild Icon:</strong> ${guild_pfp}</p>
-            <p><strong>Invite Channel:</strong> #${inviteResult.channel.name} (${inviteResult.channel.id})</p>
+            <p><strong>Invite Channel:</strong> #${escapeOutput(inviteResult.channel.name)} (${inviteResult.channel.id})</p>
             <p><strong>Special Features:</strong> ${features}</p>
-            <p><strong>Inviter:</strong> ${inviter}</p>
+            <p><strong>Inviter:</strong> ${escapeOutput(inviter)}</p>
         </div>
     `);
 }
