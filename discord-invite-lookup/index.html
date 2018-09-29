@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Discord Invite Lookup</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Discord Invite Lookup" />
+        <meta property="og:url" content="https://jakegealer.me/discord-invite-lookup/" />
+        <meta property="og:description" content="This tool allows you to lookup Discord invites." />  
+    </head>
+    <body>
+        <div class="container" style="padding-top: 20px" id="MainContainer">
+            <div class="notification is-danger is-hidden" id="NoInviteSpecified">
+                    <strong>Failure:</strong> No invite was specified.
+            </div>
+            <div class="notification is-danger is-hidden" id="LookupError">
+                <strong>Failure:</strong> Could not get information about the invite specified. Either Discord is down or it does not exist.
+            </div>
+            <h1 class="title">Discord Invite Lookup</h1>
+            <p>Created by JakeMakesStuff#0001. Feel free to DM me if this violates any TOS.</p>
+            <br>
+            <div class="field">
+                <label class="label">Invite ID/URL:</label>
+                <div class="control">
+                    <input class="input" type="text" id="InviteBox" placeholder="Invite ID/URL">
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-link" id="LookupButton">Lookup</button>
+            </div>
+            <br>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="lookup.js"></script>
+    </body>
+</html>
