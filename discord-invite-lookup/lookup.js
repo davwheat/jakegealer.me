@@ -87,7 +87,7 @@ async function startLookup() {
     if (inviteResult.guild.icon) {
         guild_pfp = `<a href="https://cdn.discordapp.com/icons/${inviteResult.guild.id}/${inviteResult.guild.icon}.png">Click here to view.</a>`;
     } else {
-        guild_pfp = "Guild does not have set."
+        guild_pfp = "Guild does not have set.";
     }
 
     await handleError(null);
