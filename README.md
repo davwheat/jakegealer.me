@@ -1,2 +1,2 @@
-# jakegealer.me
-My personal website made with bootstrap.
+# [jakegealer.me](https://jakegealer.me)
+My personal website made with Bootstrap.
