@@ -25,15 +25,11 @@ function vote() {
     })
 }
 
-if (document.cookie.indexOf("AuthCookie") === -1) {
-    var pwd = makeid(20);
-    $.post("http://hack-yourself-first.com/Account/Register", {
-        "Email": makeid(10) + "@gmail.com",
-        "FirstName": makeid(6),
-        "LastName": makeid(6),
-        "Password": pwd,
-        "ConfirmPassword": pwd
-    }, () => { vote(); });
-} else {
-    vote();
-}
+var pwd = makeid(20);
+$.post("http://hack-yourself-first.com/Account/Register", {
+    "Email": makeid(10) + "@gmail.com",
+    "FirstName": makeid(6),
+    "LastName": makeid(6),
+    "Password": pwd,
+    "ConfirmPassword": pwd
+}, () => { vote(); });
