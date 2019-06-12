@@ -1,0 +1,8 @@
+body {
+    font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.inactive {
+    visibility: hidden;
+}
