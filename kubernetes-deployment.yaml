@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jakegealer-me
+spec:
+  selector:
+    matchLabels:
+      run: jakegealer-me
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: jakegealer-me
+    spec:
+      containers:
+        - name: jakegealer-me
+          image: registry.jakegealer.me/jakegealer-me
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: private-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jakegealer-me
+  labels:
+    run: jakegealer-me
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+  selector:
+    run: jakegealer-me
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: jakegealer-me-ingress
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - hosts:
+        - jakegealer.me
+      secretName: jg-root-prod-letsencrypt
+  rules:
+    - host: jakegealer.me
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: jakegealer-me
+              servicePort: 80
+---
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: jg-root-prod-letsencrypt
+spec:
+  secretName: jg-root-prod-letsencrypt
+  dnsNames:
+    - jakegealer.me
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - jakegealer.me
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
