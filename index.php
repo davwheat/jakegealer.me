@@ -31,6 +31,22 @@
                 <br>
                 <a href="https://github.com/JakeMakesStuff/jakegealer.me">Want to fork this website? It is open source under the MPL-2.0 license!</a>
             </div>
+            <?php
+            if (array_key_exists("work", $portfolio_yml)) {
+                echo("<hr><h1 class=\"title\">Experience</h1><p>This is my experience when it comes to work. If you have any questions, do not hesitate to contact me:</p>");
+                foreach ($portfolio_yml["work"] as $job => $additional_info) {
+                    $left = "present";
+                    if ($additional_info["left"]) {
+                        $left = $additional_info["left"];
+                    }
+                    echo("<hr>");
+
+                    $btn = sprintf('<a class="button is-link" href="%s"> Learn more about %s</a>', $additional_info['url'], $job);
+                    echo('<div class="columns"><div class="column"><p>'. "<h2 class=\"subtitle\"><a href=\"". $additional_info["url"] . "\">" . $job . " (" .  $additional_info["started"] . "-" . $left . ")</a></h2>" . $additional_info['description'] . '</p><br>' . $btn .  '</div>');
+                    echo('<div class="column is-one-fifth" style="width: 10%"><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div>');
+                }
+            }
+            ?>
             <hr>
             <div class="columns">
                 <div class="column">

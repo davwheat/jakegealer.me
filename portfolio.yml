@@ -16,6 +16,15 @@ buttons:
     url: https://www.linkedin.com/in/jake-gealer-b2406116b/
 # The buttons for the top of the website.
 
+work:
+  DigitalOcean:
+    started: 2019
+    left: null
+    url: https://digitalocean.com
+    description: My job is to code for the DigitalOcean Community. DigitalOcean is a large cloud provider that powers businesses such as Slack and GitLab.
+    icon: digitalocean.svg
+  # Information about DigitalOcean.
+
 qualifications:
   Nailsea School:
     started: 2013
