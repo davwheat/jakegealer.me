@@ -8,7 +8,7 @@
         <title>Jake Gealer</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="Jake Gealer,Developer,HTML,Python,Javascript,TypeScript,for hire" />
+        <meta name="keywords" content="Jake Gealer,Developer,HTML,Python,Javascript,TypeScript" />
         <meta name="author" content="<?php echo $portfolio_yml['name'] ?>" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="<?php echo $portfolio_yml['name'] ?>" />
