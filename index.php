@@ -43,7 +43,7 @@
 
                     $btn = sprintf('<a class="button is-link" href="%s"> Learn more about %s</a>', $additional_info['url'], $job);
                     echo('<div class="columns"><div class="column"><p>'. "<h2 class=\"subtitle\"><a href=\"". $additional_info["url"] . "\">" . $job . " (" .  $additional_info["started"] . "-" . $left . ")</a></h2>" . $additional_info['description'] . '</p><br>' . $btn .  '</div>');
-                    echo('<div class="column is-one-fifth" style="width: 10%"><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div>');
+                    echo('<div class="column is-one-fifth" style="width: 10%"><br><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div>');
                 }
             }
             ?>
