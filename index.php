@@ -73,7 +73,7 @@
                     }
                     ?>
                     <h1 class="title">Extracurricular Activities</h1>
-                    <p>I have done several extracurricular activities:</p>
+                    <p>I've done several extracurricular activities:</p>
                     <br>
                     <div class="list is-hoverable">
                     <?php
