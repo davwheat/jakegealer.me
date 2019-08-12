@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="keywords" content="Jake Gealer,Developer,HTML,Python,Javascript,TypeScript" />
         <meta name="author" content="<?php echo $portfolio_yml['name'] ?>" />
+        <meta name="description" content="<?php echo $portfolio_yml['description'] ?>" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="<?php echo $portfolio_yml['name'] ?>" />
         <meta property="og:url" content="<?php echo $portfolio_yml['url'] ?>" />
