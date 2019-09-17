@@ -79,7 +79,7 @@
                     <div class="list is-hoverable">
                     <?php
                     foreach ($portfolio_yml['extracurricular_activities'] as &$activity) {
-                        echo sprintf('<p class="list-item">' . $activity . '</p>');
+                        echo '<p class="list-item">' . $activity . '</p>';
                     }
                     ?>
                     </div>
