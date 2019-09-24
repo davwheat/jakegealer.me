@@ -21,7 +21,7 @@ work:
     started: 2019
     left: null
     url: https://digitalocean.com
-    description: My job is to code for the DigitalOcean Community. DigitalOcean is a large cloud provider that powers businesses such as Slack and GitLab. An example of a tool I maintain at DigitalOcean is their <a href="https://github.com/do-community/dns-tool">DNS Lookup Tool</a>. This tool is written using the Vue web framework and Cloudflare's DNS-over-HTTPS API.
+    description: My job is to code for the DigitalOcean Community. DigitalOcean is a large cloud provider that powers businesses such as Slack and GitLab. An example of a set of tools I maintain at DigitalOcean is their <a href="https://do-community.github.io/dns-tool/">community DNS tools</a>. These tools are written using the Vue web framework and Cloudflare's DNS-over-HTTPS API.
     icon: digitalocean.svg
   # Information about DigitalOcean.
 
