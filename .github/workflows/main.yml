@@ -16,4 +16,4 @@ jobs:
       run: php index.php >> index.html && rm index.php portfolio.yml
 
     - name: Install Wrangler
-      run: npm install -g @cloudflare/wrangler
+      run: sudo npm install -g @cloudflare/wrangler
