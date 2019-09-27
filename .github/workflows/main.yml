@@ -9,5 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    steps:
+    - uses: actions/checkout@v1
+
     - name: Build the PHP and garbage collect
       run: php index.php >> index.html && rm index.php portfolio.yml
