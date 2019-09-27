@@ -20,3 +20,6 @@ jobs:
 
     - name: Publish to Cloudflare
       run: wrangler publish
+      env:
+        CF_EMAIL: ${{ secrets.CF_EMAIL }}
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
