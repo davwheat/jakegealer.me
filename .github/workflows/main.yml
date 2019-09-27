@@ -1,0 +1,13 @@
+name: Deploy to Cloudflare Workers Sites
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    - name: Build the PHP and garbage collect
+      run: php index.php >> index.html && rm index.php portfolio.yml
