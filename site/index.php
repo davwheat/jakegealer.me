@@ -6,15 +6,15 @@
 <html lang="en">
     <head>
         <title>Jake Gealer</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="keywords" content="Jake Gealer,Developer,HTML,Python,Javascript,TypeScript" />
-        <meta name="author" content="<?php echo $portfolio_yml['name'] ?>" />
-        <meta name="description" content="<?php echo $portfolio_yml['description'] ?>" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="<?php echo $portfolio_yml['name'] ?>" />
-        <meta property="og:url" content="<?php echo $portfolio_yml['url'] ?>" />
-        <meta property="og:description" content="<?php echo $portfolio_yml['description'] ?>" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Jake Gealer,Developer,HTML,Python,Javascript,TypeScript">
+        <meta name="author" content="<?php echo $portfolio_yml['name'] ?>">
+        <meta name="description" content="<?php echo $portfolio_yml['description'] ?>">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="<?php echo $portfolio_yml['name'] ?>">
+        <meta property="og:url" content="<?php echo $portfolio_yml['url'] ?>">
+        <meta property="og:description" content="<?php echo $portfolio_yml['description'] ?>">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     </head>
 
@@ -43,7 +43,7 @@
                     echo("<hr>");
 
                     $btn = sprintf('<a class="button is-link" href="%s"> Learn more about %s</a>', $additional_info['url'], $job);
-                    echo('<div class="columns"><div class="column"><p>'. "<h2 class=\"subtitle\"><a href=\"". $additional_info["url"] . "\">" . $job . " (" .  $additional_info["started"] . "-" . $left . ")</a></h2>" . $additional_info['description'] . '</p><br>' . $btn .  '</div>');
+                    echo('<div class="columns"><div class="column">'. "<h2 class=\"subtitle\"><a href=\"". $additional_info["url"] . "\">" . $job . " (" .  $additional_info["started"] . "-" . $left . ")</a></h2>" . $additional_info['description'] . '<br><br>' . $btn .  '</div>');
                     echo('<div class="column is-one-fifth" style="width: 10%"><br><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div>');
                 }
             }
