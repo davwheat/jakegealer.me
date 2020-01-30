@@ -19,7 +19,7 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="container" style="padding: 20px">
             <div style="padding: 20px; padding-top: 30px; text-align: center">
                 <h1 class="title"><?php echo $portfolio_yml['name'] ?></h1>
                 <h2 class="subtitle"><?php echo $portfolio_yml['description'] ?></h2>
@@ -44,7 +44,7 @@
 
                     $btn = sprintf('<a class="button is-link" href="%s"> Learn more about %s</a>', $additional_info['url'], $job);
                     echo('<div class="columns"><div class="column">'. "<h2 class=\"subtitle\"><a href=\"". $additional_info["url"] . "\">" . $job . " (" .  $additional_info["started"] . "-" . $left . ")</a></h2>" . $additional_info['description'] . '<br><br>' . $btn .  '</div>');
-                    echo('<div class="column is-one-fifth" style="width: 10%"><br><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div>');
+                    echo('<div class="column is-one-fifth is-hidden-mobile" style="width: 10%"><br><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div>');
                 }
             }
             ?>
@@ -92,7 +92,7 @@
                     foreach ($portfolio_yml['projects'] as $project => $additional_info) {
                         echo(sprintf('<h2 class="subtitle"><a href="%s">%s</a></h2>', $additional_info['url'], $project));
                         echo('<div class="columns"><div class="column is-four-fifths"><p>' . $additional_info['description'] . '</p><br>' . sprintf('<a class="button is-link" href="%s"> Learn more about %s</a>', $additional_info['url'], $project) .  '</div>');
-                        echo('<div class="column"><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div><hr>');
+                        echo('<div class="column is-hidden-mobile"><img src="img/' . $additional_info['icon'] . '" alt="Logo" style="margin: 0"></div>' .'</div><hr>');
                     }
                     ?>
                 </div>
