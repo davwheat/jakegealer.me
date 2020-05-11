@@ -48,12 +48,6 @@ qualifications:
       "L3 Computer Science - BTEC": Distinction* (D*)
   # Information about me at City of Bristol College.
 
-extracurricular_activities:
-  - <b>Photoshop Club:</b> In Nailsea School, there used to be a photoshop club which I would regularly attend in the school.
-  - <b>Media Ambassadors:</b> In Nailsea School, I was a part of the media Ambassadors team. This means we used to setup equipment for our school and the local community normally out of school hours.
-  - <b>NS Live:</b> In Nailsea School, I used to help run the radio station. This would involve spending most lunches helping with the technical aspects.
-# Any extracurricular activities go here.
-
 projects:
   Auttaja:
     icon: auttaja.svg

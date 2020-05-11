@@ -73,16 +73,6 @@
                         echo '<hr>';
                     }
                     ?>
-                    <h1 class="title">Extracurricular Activities</h1>
-                    <p>I've done several extracurricular activities:</p>
-                    <br>
-                    <div class="list is-hoverable">
-                    <?php
-                    foreach ($portfolio_yml['extracurricular_activities'] as &$activity) {
-                        echo '<p class="list-item">' . $activity . '</p>';
-                    }
-                    ?>
-                    </div>
                 </div>
                 <div class="column">
                     <h1 class="title">Projects</h1>
