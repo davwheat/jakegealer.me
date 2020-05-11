@@ -28,9 +28,6 @@
                         echo(sprintf('<a class="button is-link" href="%s" style="margin-right: 5px">%s</a>', $button['url'], $button['name']));
                     }
                 ?>
-                <br>
-                <br>
-                <a href="https://github.com/JakeMakesStuff/jakegealer.me">Want to fork this website? It is open source under the MPL-2.0 license!</a>
             </div>
             <?php
             if (array_key_exists("work", $portfolio_yml)) {
