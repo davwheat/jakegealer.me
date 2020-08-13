@@ -42,10 +42,10 @@ qualifications:
 
   City of Bristol College:
     started: 2018
-    graduated: null
+    graduated: 2020
     url: https://cityofbristol.ac.uk
     grades:
-      "L3 Computer Science - BTEC": Distinction* (D*)
+      "L3 Computer Science - BTEC (Extended Certificate)": Distinction* Distinction Distinction (D*DD)
   # Information about me at City of Bristol College.
 
 projects:
