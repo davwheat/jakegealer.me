@@ -63,7 +63,7 @@
                             <label class="label">Description:</label>
                             <div class="control">
                                 <div class="control">
-                                    <textarea class="textarea" id="formDescription" oninput="validateForm()" placeholder="Desciption"></textarea>
+                                    <textarea class="textarea" id="formDescription" oninput="validateForm()" placeholder="Description"></textarea>
                                 </div>
                             </div>
                         </div>
