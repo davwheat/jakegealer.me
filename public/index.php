@@ -171,7 +171,7 @@
 
             // Validates the form.
             function validateForm() {
-                formButton.disabled = formEmail.input === "" || formName.input === "" || formDescription.input === "" || hcaptchaResult === null;
+                formButton.disabled = formEmail.value === "" || formName.value === "" || formDescription.value === "" || hcaptchaResult === null;
             }
 
             // Used to get/set the hCAPTCHA result.
@@ -232,7 +232,7 @@
                     };
                     xhttp.open("POST", "/v1/submit", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
-                    xhttp.send(JSON.stringify({"name": formName.input, "description": formDescription.input, "email": formEmail.input, "hcaptcha": hcaptchaResult}));
+                    xhttp.send(JSON.stringify({"name": formName.value, "description": formDescription.value, "email": formEmail.value, "hcaptcha": hcaptchaResult}));
                 }
 
                 // Prevent standard form behaviour.
