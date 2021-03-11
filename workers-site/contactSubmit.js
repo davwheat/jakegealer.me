@@ -13,6 +13,9 @@ export default async function contactSubmit(event) {
     // Get the hCAPTCHA response.
     let res = await fetch("https://hcaptcha.com/siteverify", {
         method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
         body: `response=${encodeURIComponent(json.hcaptcha)}&secret=${HCAPTCHA_TOKEN}`,
     })
     if (!(await res.json()).success) {
