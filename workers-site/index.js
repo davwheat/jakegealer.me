@@ -29,7 +29,7 @@ async function handleEvent(event) {
   const url = new URL(event.request.url)
   let options = {}
 
-  if (url.pathname === '/v1/submit') return contactSubmit()
+  if (url.pathname === '/v1/submit') return contactSubmit(event)
 
   try {
     if (DEBUG) {

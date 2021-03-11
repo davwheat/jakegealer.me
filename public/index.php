@@ -232,7 +232,7 @@
                     };
                     xhttp.open("POST", "/v1/submit", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
-                    xhttp.send(JSON.stringify({"name": formName.input, "description": formDescription.input, "email": formEmail.input}));
+                    xhttp.send(JSON.stringify({"name": formName.input, "description": formDescription.input, "email": formEmail.input, "hcaptcha": hcaptchaResult}));
                 }
 
                 // Prevent standard form behaviour.
