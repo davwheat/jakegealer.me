@@ -224,15 +224,17 @@
                             }
                         }
 
-                        // Remove loading from the form and reset hCaptcha.
-                        hcaptcha.reset();
-                        hcaptchaResult = null;
-                        validateForm();
+                        // Remove loading from the form.
                         formButton.classList.remove("is-loading");
                     };
                     xhttp.open("POST", "/v1/submit", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
                     xhttp.send(JSON.stringify({"name": formName.value, "description": formDescription.value, "email": formEmail.value, "hcaptcha": hcaptchaResult}));
+
+                    // Reset hCaptcha.
+                    hcaptchaResult = null;
+                    hcaptcha.reset();
+                    validateForm();
                 }
 
                 // Prevent standard form behaviour.

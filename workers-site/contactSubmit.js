@@ -16,7 +16,7 @@ export default async function contactSubmit(event) {
         body: `response=${encodeURIComponent(json.hcaptcha)}&secret=${HCAPTCHA_TOKEN}`,
     })
     if (!(await res.json()).success) {
-        return new Response("Invalid reCAPTCHA.", { status: 400 })
+        return new Response("Invalid hCAPTCHA.", { status: 400 })
     }
 
     // POST the webhook.
