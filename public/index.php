@@ -226,6 +226,8 @@
 
                         // Remove loading from the form and reset hCaptcha.
                         hcaptcha.reset();
+                        hcaptchaResult = null;
+                        validateForm();
                         formButton.classList.remove("is-loading");
                     };
                     xhttp.open("POST", "/v1/submit", true);
