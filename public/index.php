@@ -75,7 +75,7 @@
                         </div>
                     </section>
                     <footer class="modal-card-foot">
-                        <button type="submit" class="button is-success is-disabled" id="formButton">Submit</button>
+                        <button type="submit" class="button is-success" id="formButton" disabled>Submit</button>
                     </footer>
                 </form>
             </div>
@@ -169,15 +169,9 @@
             var formName = document.getElementById("formName");
             var formDescription = document.getElementById("formDescription");
 
-            // Used to set the buttons state.
-            function setButtonState(disabled) {
-                if (disabled) formButton.classList.add("is-disabled");
-                else formButton.classList.remove("is-disabled");
-            }
-
             // Validates the form.
             function validateForm() {
-                setButtonState(formEmail.input === "" || formName.input === "" || formDescription.input === "" || hcaptchaResult === null);
+                formButton.disabled = formEmail.input === "" || formName.input === "" || formDescription.input === "" || hcaptchaResult === null;
             }
 
             // Used to get/set the hCAPTCHA result.
