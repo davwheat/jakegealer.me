@@ -40,7 +40,7 @@
                     <p class="modal-card-title">Contact Me</p>
                     <button class="delete" aria-label="close" onclick="closeModals()"></button>
                 </header>
-                <form onsubmit="formSubmit()">
+                <form onsubmit="formSubmit">
                     <section class="modal-card-body">
                         <p><?php echo $portfolio_yml["contact_message"] ?></p>
                         <div class="field">
