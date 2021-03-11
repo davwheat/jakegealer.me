@@ -15,11 +15,9 @@ jobs:
     - name: Build the PHP and garbage collect
       run: cd ./public && php ./index.php >> ./index.html && rm ./index.php ./portfolio.yml && cd ..
 
-    - name: Install Wrangler
-      run: sudo npm install -g @cloudflare/wrangler
-
     - name: Publish to Cloudflare
-      run: wrangler publish
-      env:
-        CF_EMAIL: ${{ secrets.CF_EMAIL }}
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      steps:
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          email: ${{ secrets.CF_EMAIL }}
+          apiKey: ${{ secrets.CF_API_KEY }}
