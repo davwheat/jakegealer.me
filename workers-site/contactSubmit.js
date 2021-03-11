@@ -11,7 +11,7 @@ export default async function contactSubmit(event) {
     }
 
     // Get the hCAPTCHA response.
-    const res = await fetch("https://hcaptcha.com/siteverify", {
+    let res = await fetch("https://hcaptcha.com/siteverify", {
         method: "POST",
         body: `response=${encodeURIComponent(json.hcaptcha)}&secret=${HCAPTCHA_TOKEN}`,
     })
@@ -20,7 +20,7 @@ export default async function contactSubmit(event) {
     }
 
     // POST the webhook.
-    const res = await fetch(DISCORD_WEBHOOK, {
+    res = await fetch(DISCORD_WEBHOOK, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
