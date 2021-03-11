@@ -1,10 +1,9 @@
-account_id = "ac2dd89af834dd17d7f5cf5df3789f08"
 name = "jakegealer-me"
 type = "webpack"
-private = false
+account_id = "ac2dd89af834dd17d7f5cf5df3789f08"
+workers_dev = false
 route = "jakegealer.me/*"
 zone_id = "8ca966f8753a1255e97401c9dbab2afe"
 
 [site]
-bucket = "./site"
-entry-point = "workers-site"
+bucket = "./public"
