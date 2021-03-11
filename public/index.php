@@ -40,7 +40,7 @@
                     <p class="modal-card-title">Contact Me</p>
                     <button class="delete" aria-label="close" onclick="closeModals()"></button>
                 </header>
-                <form onsubmit="formSubmit">
+                <form onsubmit="formSubmit(event)">
                     <section class="modal-card-body">
                         <p><?php echo $portfolio_yml["contact_message"] ?></p>
                         <div class="field">
@@ -196,7 +196,11 @@
             }
 
             // Handle the form being submitted.
-            function formSubmit() {
+            function formSubmit(e) {
+                // Prevent the default action.
+                e.preventDefault();
+
+                // Figure out what to do with the information.
                 if (hcaptchaResult === null) {
                     // Tell the user to fill out the hCaptcha.
                     openResult("hCaptcha Blank", "You did not fill out the hCaptcha.");
