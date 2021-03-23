@@ -15,6 +15,7 @@
         <meta property="og:title" content="<?php echo $portfolio_yml['name'] ?>">
         <meta property="og:url" content="<?php echo $portfolio_yml['url'] ?>">
         <meta property="og:description" content="<?php echo $portfolio_yml['description'] ?>">
+        <link rel="shortcut icon" type="image/png" href="favicon.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
         <script src="https://hcaptcha.com/1/api.js" async defer></script>
     </head>
