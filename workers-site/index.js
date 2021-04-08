@@ -1,5 +1,6 @@
 import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
 import contactSubmit from './contactSubmit'
+import smsSubmit from './smsSubmit'
 
 /**
  * The DEBUG flag will do two things that help during development:
@@ -30,6 +31,7 @@ async function handleEvent(event) {
   let options = {}
 
   if (url.pathname === '/v1/submit') return contactSubmit(event)
+  if (url.pathname === '/v1/sms') return smsSubmit(event, url.searchParams)
 
   try {
     if (DEBUG) {
