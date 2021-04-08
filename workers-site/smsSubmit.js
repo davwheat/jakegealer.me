@@ -6,7 +6,7 @@ export default async function smsSubmit(event, searchParams) {
     const formData = await event.request.formData()
 
     // POST the webhook.
-    res = await fetch(DISCORD_WEBHOOK, {
+    const res = await fetch(DISCORD_WEBHOOK, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
