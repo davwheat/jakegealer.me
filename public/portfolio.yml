@@ -13,6 +13,14 @@ buttons:
 # The buttons for the top of the website.
 
 work:
+  Krystal:
+    started: 2021
+    left: null
+    url: https://k.io/
+    description: My job at Krystal is writing solutions primarily in Go. An example of my work is working on the <a href="https://github.com/krystal/katapult-cli">Katapult CLI</a>.
+    icon: krystal.jpeg
+  # Information about Krystal.
+
   DigitalOcean:
     started: 2019
     left: 2021
