@@ -172,7 +172,7 @@
 
             // Validates the form.
             function validateForm() {
-                formButton.disabled = formEmail.value === "" || formName.value === "" || formDescription.value === "" || hcaptchaResult === null;
+                formButton.disabled = formEmail.value.length == 0 || formName.value.length == 0 || formDescription.value.length == 0 || hcaptchaResult == null;
             }
 
             // Used to get/set the hCAPTCHA result.
@@ -184,16 +184,16 @@
 
             // Opens the result modal.
             function openResult(title, description) {
-                contactForm.classList.remove("is-active");
+                contactForm.className = "modal";
                 resultTitle.innerText = title;
                 resultDescription.innerText = description;
-                resultModal.classList.add("is-active");
+                resultModal.className = "modal is-active";
             }
 
             // Closes all modals.
             function closeModals() {
-                resultModal.classList.remove("is-active");
-                contactForm.classList.remove("is-active");
+                resultModal.className = "modal";
+                contactForm.className = "modal";
             }
 
             // Handle the form being submitted.
@@ -202,21 +202,21 @@
                 e.preventDefault();
 
                 // Figure out what to do with the information.
-                if (hcaptchaResult === null) {
+                if (hcaptchaResult == null) {
                     // Tell the user to fill out the hCaptcha.
                     openResult("hCaptcha Blank", "You did not fill out the hCaptcha.");
                 } else {
                     // Mark the button as loading.
-                    formButton.classList.add("is-loading");
+                    formButton.className = "button is-success is-loading";
 
                     // Create a HTTP request.
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function() {
-                        if (this.readyState === 4) {
-                            if (this.status === 204) {
+                        if (this.readyState == 4) {
+                            if (this.status == 204) {
                                 // Success!
                                 openResult("Form Submission Successful", "I have successfully received your message!");
-                            } else if (this.status === 400) {
+                            } else if (this.status == 400) {
                                 // This was us.
                                 openResult("Form Submission Error", xhttp.responseText);
                             } else {
@@ -226,7 +226,7 @@
                         }
 
                         // Remove loading from the form.
-                        formButton.classList.remove("is-loading");
+                        formButton.className = "button is-success";
                     };
                     xhttp.open("POST", "/v1/submit", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
@@ -244,7 +244,7 @@
 
             // Opens the contact form.
             function openForm() {
-                contactForm.classList.add("is-active");
+                contactForm.className = "modal is-active";
             }
         </script>
     </body>
