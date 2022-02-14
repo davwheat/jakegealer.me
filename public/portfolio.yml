@@ -17,7 +17,7 @@ work:
     started: 2021
     left: null
     url: https://k.io/
-    description: My job at Krystal is writing solutions primarily in Go. An example of my work is working on the <a href="https://github.com/krystal/katapult-cli">Katapult CLI</a>.
+    description: My job at Krystal is writing backend solutions primarily in Go. An example of my work is working on the <a href="https://github.com/krystal/katapult-cli">Katapult CLI</a> and working on Koru, our work in progress alternative to cPanel. We use a variety of technologies such as gRPC to power this in the backend.
     icon: krystal.jpeg
   # Information about Krystal.
 
@@ -25,7 +25,7 @@ work:
     started: 2019
     left: 2021
     url: https://digitalocean.com
-    description: My job is to code for the DigitalOcean Community. DigitalOcean is a large cloud provider that powers businesses such as Slack and GitLab. An example of a set of tools I maintain at DigitalOcean is their <a href="https://do-community.github.io/dns-tool/">community DNS tools</a>. These tools are written using the Vue web framework and Cloudflare's DNS-over-HTTPS API.
+    description: My job was to write code for the community aspects of the DigitalOcean website. DigitalOcean is a large cloud provider that powers businesses such as Slack and GitLab. My job at DigitalOcean was writing various community tools and working on the start of their Next.js platform. These tools used a variety of frameworks such as React and Vue, and also used various different API's. An example of a set of tools I maintained at DigitalOcean is their <a href="https://do-community.github.io/dns-tool/">community DNS tools</a>. For this specific set of tools, we used Vue and the Cloudflare DNS-over-HTTPS API. This made the tool very portable and easy to insert into the legacy Rails site at the time and the more modern version later down the road.
     icon: digitalocean.svg
   # Information about DigitalOcean.
 
@@ -58,27 +58,27 @@ qualifications:
     graduated: null
     url: "https://northumbria.ac.uk/"
     grades:
-      "Computer Science BSc Hons": <a href="https://blog.jakegealer.me/mental-health/">Dropped out. Here's why.</a>
+      "Computer Science BSc Hons": DNF due to personal issues
   # Information about Northumbria University
 
 projects:
   Auttaja:
     icon: auttaja.svg
     url: https://auttaja.io
-    description: Auttaja is a moderation bot for the Discord messaging platform. I have been a member of the Auttaja development team since the 29th January 2018. In that time, I have worked on 2 major releases that have made the bot a major success. Due to our teamwork, the bot is in over 120,000 servers.
+    description: Auttaja is a moderation bot for Discord which is written in Python. I have been a member of the Auttaja development team since the 29th January 2018. In that time, I have worked on 2 major releases that have made the bot a major success. Due to our teamwork, the bot is in over 175,000 servers.
   # Information about Auttaja/my role with the bot.
+
+  Cyno:
+    icon: cyno.png
+    url: https://cyno.lol
+    description: Cyno is a Discord bot that is written in Go with the dashboard written with the Rails framework. It offers various bits of functionality such as birthday roles, currency, minigames, and XP.
+  # Information about Cyno.
 
   MagicCap:
     icon: magiccap.png
     url: https://magiccap.me
     description: MagicCap is a image/GIF/clipboard capture and file upload suite for macOS and Linux. MagicCap was created by me in mid 2018 due to the lack of good capture software on both platforms (whereas Windows has ShareX). During my time owning MagicCap, I have reviewed a lot of large changes, set up a CI so that the application can easily be built, and became extremely proficient in the Electron framework.
   # Information about MagicCap/my role with making it.
-
-  ParseThoseArgs:
-    description: ParseThoseArgs is a argument parser written in C/Python. It is intended to be an extremely fast argument parser for Python. Even though it is not a large project, it helps to accelerate Python chatbots due to the interpreted nature of Python.
-    icon: parsethoseargs.png
-    url: "https://github.com/jakemakesstuff/parsethoseargs"
-  # Information about ParseThoseArgs.
 
 hcaptcha_site_key: "36fd716b-fb51-4021-a0a0-405b7f23c763"
 contact_message: "Do you wish to contact me? Enter your inquiry (not product advertising please!) below and I'll take a look:"
